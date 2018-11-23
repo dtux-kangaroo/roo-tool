@@ -1,0 +1,36 @@
+{
+  "name": "roo-tool",
+  "version": "1.0.0",
+  "description": "This is a front-end scaffold commonly used tool library, integrates the Cookie, with indexedDB and custom event operations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "buildP": "NODE_ENV=production rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "author": "林翮 <linhe@dtstack.com>",
+  "license": "ISC",
+  "keywords": [
+    "Tool", "Cookie", "URI","indexDb"
+  ],
+  "dependencies": {
+    "js-cookie": "^2.2.0",
+    "npm": "^6.4.1",
+    "roo-bid": "^1.0.0",
+    "urijs": "^1.19.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-external-helpers": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-stage-2": "^7.0.0",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-json": "^3.1.0",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-replace": "^2.1.0",
+    "rollup-plugin-uglify": "^6.0.0"
+  }
+}
