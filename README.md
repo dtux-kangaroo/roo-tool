@@ -34,10 +34,10 @@ Cookies.set('name', 'value', { path: '' });
 Cookies.remove('name'); // fail!
 Cookies.remove('name', { path: '' }); // removed!
 
+// URI基本操作api
 var url = new URI();
 // return http://smoothprogramming.com/tutorials/get-set-query-string-values-from-url-using-uri-js
 // This is equivalent to window.location.href command in js.
-
 
 url = new URI("http://www.smoothprogramming.com:80/tutorials/get-set-query-string-values-from-url-using-uri-js.html");
 // Sets URL to http://www.smoothprogramming.com:80/tutorials/get-set-query-string-values-from-url-using-uri-js.html
@@ -76,14 +76,14 @@ URI操作相关apI: https://www.npmjs.com/package/urijs
 #### localDb.js相关API
 
 方法|说明|参数| 返回值
---| : -- : | : -- :| -- :
+--| -- | -- | -- 
 set|按key存贮数据value到localStorage|(key,value),key存贮数据的唯一标识,value 所要存贮的数据|null
 get|通过key从localStorage获取数据|key(获取数据的可以标识)|null/string/object
 clear|清空localStorage|-|-
 *****
 ##### Tool.js相关API
 方法|说明|参数| 返回值
---| : -- : | : -- :|-- :
+--| --  | -- |-- 
 getDocumentTop | 获取文档高度 | 无 |number
 getWindowHeight| 可视窗口高度 | 无 |number
 getScrollHeight| 滚动条滚动高度 | 无 |number
