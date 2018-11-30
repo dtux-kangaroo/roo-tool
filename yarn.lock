@@ -3400,6 +3400,15 @@ roo-bid@^1.0.0:
     semver "^5.5.0"
     user-home "^2.0.0"
 
+roo-tool@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.npmjs.org/roo-tool/-/roo-tool-0.1.1.tgz#db751897ff23b66ea34985cec0a4ef0f45e64d5d"
+  dependencies:
+    js-cookie "^2.2.0"
+    npm "^6.4.1"
+    roo-bid "^1.0.0"
+    urijs "^1.19.1"
+
 run-async@^2.2.0:
   version "2.3.0"
   resolved "http://registry.npm.taobao.org/run-async/download/run-async-2.3.0.tgz#0371ab4ae0bdd720d4166d7dfda64ff7a445a6c0"

@@ -7,9 +7,9 @@ npm install roo-tool
 ```
 #### 使用
 ```
-<script src="/path/to/roo-too.js">
+<script src="/path/to/roo-tool.js">
 //或
-</script><script src="/path/to/roo-too.min.js"></script>
+</script><script src="/path/to/roo-tool.min.js"></script>
 ```
 ####Package Managers
 JavaScript RooTool supports npm and yarn under the name roo-tool.
