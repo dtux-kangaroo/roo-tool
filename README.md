@@ -11,10 +11,10 @@ npm install roo-tool
 //或
 </script><script src="/path/to/roo-tool.min.js"></script>
 ```
-####Package Managers
+#### Package Managers
 JavaScript RooTool supports npm and yarn under the name roo-tool.
 Module Loaders
-####Module Loaders
+#### Module Loaders
 JavaScript RooTool can also be loaded as an AMD, CommonJS or ES6 module.
 #### 集成模块
 集成npm第三方依赖包，包含其所有功能。
@@ -93,8 +93,8 @@ getStrlen| 计算字符串长度(英文占1个字符，中文汉字占2个字符
 isJSONStr| 判断是否是JSON string | string |bool
 isPhoneNumber| 校验手机号格式 | string |bool
 trim| 去除空串 | string |string
-####Changelog
+#### Changelog
 
 moved to Changelog
-####如果封装好更加好用的方法函数，欢迎联系补充
+#### 如果封装好更加好用的方法函数，欢迎联系补充
  <linhe@dtstack.com>
