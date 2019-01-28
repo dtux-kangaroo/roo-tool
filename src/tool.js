@@ -46,16 +46,6 @@ const  Tool = {
         return scrollHeight;
     },
     /**
-     *
-     *  校验Url的有效性
-     * @param {*} sUrl
-     * @returns
-     */
-    checkURLExist (sUrl){
-        let reg=/(http|ftp|https):\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&:/~\+#]*[\w\-\@?^=%&/~\+#])?/;
-        return reg.test(sUrl);
-    },
-      /**
        *
        *  自定义上传事件获取文件URl方法
        * @param {*} file
@@ -92,7 +82,27 @@ const  Tool = {
       }   
       return len;  
     },
-
+     /**
+      *去除空串
+      *
+      * @param {*} str
+      * @returns
+      */
+     trim (str){
+        return typeof str === 'string'
+            ? str.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '')
+            : str;
+  },
+     /**
+     *
+     *  校验Url是否为真实
+     * @param {*} sUrl
+     * @returns
+     */
+    isRealUrl(sUrl){
+        let reg=/(http|ftp|https):\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&:/~\+#]*[\w\-\@?^=%&/~\+#])?/;
+        return reg.test(sUrl);
+    },
     /**
      * 判断是否是JSON string
      * @param  {String}  str 所要验证的字符串
@@ -115,15 +125,65 @@ const  Tool = {
         return reg.test(tel);
       },
      /**
-      *去除空串
+      *  判断是否是函数
       *
-      * @param {*} str
+      * @param {*} arg
       * @returns
       */
-    trim (str){
-          return typeof str === 'string'
-              ? str.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '')
-              : str;
-    }
+    isFunction:(arg) => {
+        if (arg) {
+            if (typeof (/./) !== 'function') {
+                return typeof arg === 'function';
+            } else {
+                return Object.prototype.toString.call(arg) === '[object Function]';
+            }
+        }
+        return false;
+    },
+      // 变成千分位
+    toThousands:(num) =>{
+        return (num || 0).toString().replace(/^\d+/g, (m) => m.replace(/(?=(?!^)(\d{3})+$)/g, ','));
+    },
+    /**
+     *
+     *  防抖函数
+     * @param {*} func
+     * @param {*} wait   
+     * @param {*} immediate 
+     * @returns
+     */
+    debounceFunc:(func, wait, immediate) => {
+
+        var timeout, result;
+    
+        var debounced = function () {
+            var context = this;
+            var args = arguments;
+    
+            if (timeout) clearTimeout(timeout);
+            if (immediate) {
+                // 如果已经执行过，不再执行
+                var callNow = !timeout;
+                timeout = setTimeout(function(){
+                    timeout = null;
+                }, wait)
+                if (callNow) result = func.apply(context, args)
+            }
+            else {
+                timeout = setTimeout(function(){
+                    func.apply(context, args)
+                }, wait);
+            }
+            return result;
+        };
+    
+        debounced.cancel = function() {
+            clearTimeout(timeout);
+            timeout = null;
+        };
+    
+        return debounced;
+    },
+
 }
 export default Tool

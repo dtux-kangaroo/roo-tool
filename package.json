@@ -1,6 +1,6 @@
 {
   "name": "roo-tool",
-  "version": "0.1.1",
+  "version": "1.0.2",
   "description": "This is a front-end scaffold commonly used tool library, integrates the Cookie, with indexedDB and custom event operations",
   "repository": "git@github.com:dtux-kangaroo/roo-tool.git",
   "main": "index.js",
@@ -19,8 +19,8 @@
     "indexDb"
   ],
   "dependencies": {
-    "js-cookie": "^2.2.0",
-    "urijs": "^1.19.1"
+    "js-cookie": "latest",
+    "urijs": "latest"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

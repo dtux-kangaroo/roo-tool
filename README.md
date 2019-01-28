@@ -19,8 +19,8 @@ JavaScript RooTool can also be loaded as an AMD, CommonJS or ES6 module.
 #### 集成模块
 集成npm第三方依赖包，包含其所有功能。
 ```
-js-cookie 
-urijs
+js-cookie //最新版本
+urijs   //最新版本
 ```
 ### Basic Usage
 
@@ -70,8 +70,10 @@ url.filename());
 // return "get-set-query-string-values-from-url-using-uri-js.html"
 ```
 更多URI及Cookie的信息请查看
-Cookie操作相关api：https://www.npmjs.com/package/js-cookie
-URI操作相关apI: https://www.npmjs.com/package/urijs
+
+Cookie操作相关api:  https://www.npmjs.com/package/js-cookie
+
+URI操作相关apI:  https://www.npmjs.com/package/urijs
 *****
 #### localDb.js相关API
 
@@ -84,15 +86,18 @@ clear|清空localStorage|-|-
 ##### Tool.js相关API
 方法|说明|参数| 返回值
 --| --  | -- |-- 
+trim| 去除空串 | string |string
 getDocumentTop | 获取文档高度 | 无 |number
 getWindowHeight| 可视窗口高度 | 无 |number
 getScrollHeight| 滚动条滚动高度 | 无 |number
-checkURLExist| 校验Url的有效性 | url |bool
 getObjectURL| 自定义上传事件获取文件URl方法 | file |string
 getStrlen| 计算字符串长度(英文占1个字符，中文汉字占2个字符) | string |number
-isJSONStr| 判断是否是JSON string | string |bool
+isRealUrl| 校验Url的有效性 | url |bool
+isJSONStr| 判断是否是JSON | string |bool
+isFunction| 判断是否是函数 | function |bool
 isPhoneNumber| 校验手机号格式 | string |bool
-trim| 去除空串 | string |string
+toThousands| 分隔数值千分位符 | number |number
+debounceFunc| 防抖函数 |func,wait,immediate|null
 ####Changelog
 
 moved to Changelog
