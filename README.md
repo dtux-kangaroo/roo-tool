@@ -11,10 +11,10 @@ npm install roo-tool
 //或
 </script><script src="/path/to/roo-tool.min.js"></script>
 ```
-####Package Managers
+#### Package Managers
 JavaScript RooTool supports npm and yarn under the name roo-tool.
 Module Loaders
-####Module Loaders
+#### Module Loaders
 JavaScript RooTool can also be loaded as an AMD, CommonJS or ES6 module.
 #### 集成模块
 集成npm第三方依赖包，包含其所有功能。
@@ -101,5 +101,5 @@ debounceFunc| 防抖函数 |func,wait,immediate|null
 ####Changelog
 
 moved to Changelog
-####如果封装好更加好用的方法函数，欢迎联系补充
+#### 如果封装好更加好用的方法函数，欢迎联系补充
  <linhe@dtstack.com>
